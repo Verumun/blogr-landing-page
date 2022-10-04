@@ -1,0 +1,235 @@
+@import 'abstracts/variables';
+@import 'abstracts/reset';
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+
+html{
+    font-size: 62.5%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    // font-size: 1.2rem;
+    font-size: 1.6rem;
+    background-color: $Very-dark-black-blue;
+}
+
+
+.hero-wrapper{
+    background-color: red;
+    border-bottom-left-radius: 10rem;
+    // width: 85%;
+}
+
+// header
+header{
+    // padding: 1rem 5rem;
+    width: 70%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.toggle{
+    display: none;
+}
+
+ul.navigation{
+    display: flex;
+    gap: 2rem;
+
+    li{
+        list-style-type: none;
+
+        a{
+            text-decoration: none;
+            color: #fff;
+            text-transform: capitalize;
+            
+        }
+    }
+   
+}
+
+
+nav{
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    // flex-direction: column;
+
+
+    // Navigation parent
+   
+    .nav-container{
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+
+        .logo{img{width: 5rem;}}
+
+        .navigation-wrapper{
+            display: flex;
+            justify-content: space-between!important;
+            align-items: center;
+        }
+
+        // this should go to reset component when refactoring
+        ul.navigation{
+            
+            gap: 3rem;
+
+            li{
+                position: relative;
+
+                &:hover .submenu{
+                    display: block;
+                }
+
+                // main navigation on hover
+                .main-nav{
+                    
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+
+
+                // submenu
+                .submenu{
+                    background-color: $White;
+                    position: absolute;
+                    padding: .5rem;
+                    border-radius: .25rem;
+                    display: none;
+                    // transition: display 5s;
+                    // opacity: 0;
+
+                    li{ //change the otehr classes to submenu-item 
+                        padding: .5rem;
+                    }
+
+                    a{
+                        color: $Grayish-blue;
+
+                        &:hover{
+                            color:$Very-dark-black-blue;
+                        }
+                        
+                    }
+                    
+                }
+                .product-submenu{
+                    right: -1rem;
+                    padding-left: 1rem;
+                    // display: flex;
+                    flex-direction: column;
+                    
+                }
+
+                .connect-submenu{
+                    right: -3.5rem;
+                    padding: 1rem 2.5rem 1rem 1rem;
+                }
+
+                .company-submenu{
+                    padding: .6rem 1rem;
+                    // width: 7.5rem;
+                    left: -.5rem;
+                    align-items: flex-start;
+                    // text-align: center;
+                }
+            }
+        }
+
+    }
+
+    .right-navigation{
+       ul{
+           li{
+               a{
+                   padding: .8rem 2rem;
+                  &:hover{
+                      border-radius: 2.5rem;
+                      background-color: $Grayish-blue;
+                    //   padding: 1rem;
+                  } 
+               }
+           }
+       }
+    }
+}
+
+// media query
+@media screen and (max-width:750px){
+    header{
+        // position: relative;
+
+        nav{
+            justify-content: space-between;
+        }
+    }
+   ul.navigation{
+       flex-direction: column;
+
+       li{
+           position: static!important; //this overrides the default one
+           a{
+                color: $Very-dark-black-blue
+            }
+
+           .submenu{
+                background-color: $Grayish-blue!important;
+               left: 50%;
+               right: 50%;
+               transform: translateX(-50%);
+               text-align: center;
+               width: 90%;
+
+               a{color: $Very-dark-black-blue!important;}
+           }
+
+           .product-submenu, .connect-submenu{
+               right: 0!important;
+           }
+
+           .company-submenu{left: 50%!important;}
+       }
+   }
+
+//    nav{
+//        justify-content: flex-start;
+//     //    flex-direction: column;
+//    }
+
+    // .nav-container{
+    //     // position: relative;
+    // }
+
+    .navigation-wrapper{
+        flex-direction: column;
+        background-color: $White;
+        position: absolute;
+        top: 4rem;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        height: 30rem;
+        // left: 10rem;
+        // left: -50%;
+        // right: -50%;
+        // transform: translate();
+        
+    }
+
+    .toggle{
+        display: block;
+    }
+
+}
