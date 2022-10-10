@@ -13,25 +13,108 @@ html{
     padding: 0;
 }
 
+img{width: 100%;}
+.mobile{display: none;}
+.logo{img{width: 10rem;}}
+
+h2::first-letter, h3::first-letter, h4::first-letter{
+    text-transform: capitalize;
+}
+
+
 body{
     // font-size: 1.2rem;
     font-size: 1.6rem;
-    background-color: $Very-dark-black-blue;
+    background-color: $White;
+    font-family: 'Overpass', sans-serif;
+    
 }
 
 
 .hero-wrapper{
-    background-color: red;
+    // background-color: $Light-red;
     border-bottom-left-radius: 10rem;
+    background-image: url(../images/bg-pattern-intro-desktop.svg), linear-gradient(90deg, $Very-light-red, $Light-red);
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+   
     // width: 85%;
+
+    .hero-content-1{
+        // width: 100%;
+        
+        text-align: center;
+        color: $White;
+        padding: 7rem 0 15rem 0;
+
+        .content{
+            h2{
+                font-size: 7rem;
+            }
+    
+            p{
+                margin: .5rem 0 2rem 0;
+                font-size: 1.9rem;
+            } 
+        }
+
+        .buttons-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            // margin: auto;
+
+            button{
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 1rem 2rem;
+                border-radius: 2rem;
+                text-transform: capitalize;
+                transition: .2s ease-in-out 0s;
+
+                &:hover{
+                    transform: translateY(-.25rem);
+                }
+                &:active{
+                    transform: translateY(0);
+                }
+
+                &.start-for-free{
+                    background-color: $White;
+                    color: $Light-red;
+
+                    &:hover{
+                        background-color: #c8c8cb94;
+                        color: $White;
+                    }
+                }
+
+                &.learn-more{
+                    background-color: transparent;
+                    border: 1px solid $White;
+                    color: $White;
+
+                    &:hover{
+                        background-color: $White;
+                        color: $Very-light-red;
+                    }
+                }
+            }
+        }
+       
+    }
 }
+
 
 // header
 header{
     // padding: 1rem 5rem;
-    width: 70%;
+    width: 80%;
     margin: auto;
-    padding: 2rem 0;
+    padding: 4rem 0 2rem 0;
 }
 
 .toggle{
@@ -69,12 +152,13 @@ nav{
         display: flex;
         align-items: center;
         gap: 5rem;
-
-        .logo{img{width: 5rem;}}
+        width: 100%;
 
         .navigation-wrapper{
             display: flex;
-            justify-content: space-between!important;
+            justify-content: space-between;
+            width: 100%;
+            // gap: 10rem;
             align-items: center;
         }
 
@@ -88,13 +172,16 @@ nav{
 
                 &:hover .submenu{
                     display: block;
+                    transition: 5s ease-in-out;
                 }
 
                 // main navigation on hover
                 .main-nav{
                     
+                    
                     &:hover{
                         text-decoration: underline;
+                        
                     }
                 }
 
@@ -153,9 +240,10 @@ nav{
            li{
                a{
                    padding: .8rem 2rem;
+                   transition: .2s ease-in-out 0s;
                   &:hover{
                       border-radius: 2.5rem;
-                      background-color: $Grayish-blue;
+                      background-color: #c8c8cb94;
                     //   padding: 1rem;
                   } 
                }
@@ -164,8 +252,166 @@ nav{
     }
 }
 
+
+// Future section styling
+.hero-content-2{
+    // width: 80%;
+    padding-left: 10rem;
+    // margin: auto 0 0 auto;
+    padding-top: 10rem;
+
+    h3, h4{
+        color:$Very-dark-blue;
+    }
+
+    h3{
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: -10rem;
+    }
+
+    h4{
+        margin-bottom: 2rem;
+    }
+    p{
+        line-height: 1.4;
+        font-size: 1.8rem;
+    }
+
+    .flex-container{
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        gap: 10rem;
+
+        .content{
+            font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+
+            // p{
+            //     font-size: 9rem;
+            // }
+        }
+
+        .image-container{
+            margin-right: -22rem;
+            .desktop{
+                width: 80rem;
+            }
+        }
+    }
+}
+
+// State of infrastructure
+.hero-content-3{
+    // position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 10rem;
+    gap: 10rem;
+    background-color: $Very-dark-desaturated-blue;
+    border-top-right-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+    background-image: url(../images/bg-pattern-circles.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+    
+
+    .image-container{
+        position: relative;
+        z-index: 4;
+        
+        // height: 5rem;
+        // aspect-ratio: ;
+
+        img{
+            // position: absolute;
+            top: 2rem;
+            left: 0;
+            height: 30rem;
+            width: 30rem;
+        }
+    }
+}
+
+.hero-content-4{
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    padding-right: 10rem;
+    margin-top: 10rem;
+    background-color: #FFFFFE;
+
+    .image-container{
+        margin-left: -23rem;
+
+            .desktop{
+                width: 80rem;
+            }
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+    h4{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        font-size: 1.9rem;
+        color: $Very-dark-blue;
+    }
+    p{
+        line-height: 1.4;
+    }
+}
+
+footer{
+    background-color: $Very-dark-black-blue;
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 10rem;
+    flex-wrap: wrap;
+
+    ul{
+        li{
+            list-style-type: none;
+            line-height: 2;
+
+            &.main-nav{
+                margin-bottom: 1.2rem;
+                a{font-weight: 700;}
+            }
+
+
+            a{
+                text-decoration: none;
+                color: $White;
+                text-transform: capitalize;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+                
+            }
+
+        
+        }
+
+        
+    }
+}
+
 // media query
 @media screen and (max-width:750px){
+    // Reset fot images
+    .desktop{display:none}
+    .mobile{display: block;}
+
+
     header{
         // position: relative;
 
@@ -179,7 +425,7 @@ nav{
        li{
            position: static!important; //this overrides the default one
            a{
-                color: $Very-dark-black-blue
+                color: $Very-dark-black-blue;
             }
 
            .submenu{
@@ -211,25 +457,51 @@ nav{
     // }
 
     .navigation-wrapper{
+        // justify-content: static!important;
         flex-direction: column;
         background-color: $White;
         position: absolute;
         top: 4rem;
-        width: 90%;
+        width: 90%!important;
         margin-left: auto;
         margin-right: auto;
         left: 0;
         right: 0;
         height: 30rem;
+        padding: 2rem 0;
+        display: none!important;
         // left: 10rem;
         // left: -50%;
         // right: -50%;
         // transform: translate();
         
+        .right-navigation{
+            border-top: .01rem solid;
+            width: 90%;
+            ul{
+                text-align: center;
+                
+                li{
+                    .sign-up{
+                        // padding: 0;
+                        background-color: red;
+                        border-radius: 2.5rem;
+                        color: #fff;
+                        padding: .8rem 3rem;
+                    }
+                }
+            }
+        }
     }
 
     .toggle{
         display: block;
     }
+
+
+
+}
+
+@media screen and (max-width:1350px){
 
 }

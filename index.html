@@ -19,6 +19,7 @@
 <body>
 
   <section class="hero-wrapper">
+    <!-- header with nav -->
     <header>
       <nav>
         
@@ -26,9 +27,9 @@
           <div class="logo"><img src="images/logo.svg" alt="logo"></div>
 
           
-          <div class="navigation-wrapper">
+          <div class="navigation-wrapper" id="primary-navigation" data-visible="false">
               <!-- left navigation -->
-              <ul class="navigation" id="primary-navigation" data-visible="false">
+              <ul class="navigation" >
                 <!-- Product link anchor -->
                 <li><a class="main-nav" href="#">product</a>
                   <!-- submenu items -->
@@ -68,7 +69,7 @@
               <div class="right-navigation">
                 <ul class="navigation">
                   <li><a href="#">login</a></li>
-                  <li><a href="#">sign up</a></li>
+                  <li><a class="sign-up" href="#">sign up</a></li>
                 </ul>
               </div>
               <!-- End of right navigation -->
@@ -89,84 +90,166 @@
 
       </nav>
     </header>
+    <!-- end of header with nav -->
+
+    <!--Hero Content -->
+    <section class="hero-content-1">
+      <div class="content">
+        <h2>A modern 
+          <span>publishing platform</span>
+        </h2>
+        <p>Grow your audience and build your online brand</p>
+      </div>
+
+      <div class="buttons-wrapper">
+        <button class="start-for-free">start for free</button>
+        <button class="learn-more">learn more</button>
+      </div>
+    </section>
+    <!-- End of hero content -->
   </section>
  
+  <!-- future section -->
+  <section class="hero-content-2">
+    <h3>designed for the future</h3>
 
-  Product
+    <div class="flex-container">
+      <!-- Contents section -->
+      <div class="content">
+        <!-- content 1 editor -->
+        <div>
+          <h4>introducing an entensible editor</h4>
+          <p> Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+            change the looks of a blog.</p>
+        </div>
+        <!-- end of content 1 editor -->
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
+        <!-- content 2 management -->
+        <div>
+          <h4>Robust content management</h4>
+          <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+            by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+        </div>
+        <!-- End of content 2 management -->
+      </div>
+      <!-- End of contents container  -->
 
-  Company
 
-  About
-  Team
-  Blog
-  Careers
+      <!-- Right flexed image -->
+      <div class="image-container">
+        <img class="mobile" src="images/illustration-editor-mobile.svg" alt="">
+        <img class="desktop" src="images/illustration-editor-desktop.svg" alt="">
+      </div>
+      <!-- End of Flexed image  -->
+    </div>
+  </section>
+  <!-- End of future section -->
 
-  Connect
+  <!-- Phones section -->
+  <section class="hero-content-3">
+    <!-- Image container -->
+    <div class="image-container">
+      <img src="images/illustration-phones.svg" alt="">
+    </div>
+    <!-- Image container -->
 
-  Contact
-  Newsletter
-  LinkedIn
+    <!-- Infrastructure content -->
+    <div>
+      <h3>state of the art infrastructure</h3>
+      <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+    </div>
+    <!-- End of infrastructure content -->
+  </section>
+  <!-- End of phones section -->
+
+  <!--  HERO CONTENT 4  -->
+  <section class="hero-content-4">
+    <!-- Image container -->
+    <div class="image-container">
+      <img class="desktop" src="images/illustration-laptop-desktop.svg" alt="">
+      <img class="mobile" src="images/illustration-laptop-mobile.svg" alt="">
+    </div>
+    <!--end image container -->
+
+    <!-- Content section -->
+    <div class="content">
+      <!-- Simple -->
+      <div>
+        <h4>  Free, open, simple</h4>
   
-  Login
-  Sign Up
-
-  A modern publishing platform
-  Grow your audience and build your online brand
-
-  Start for Free
-  Learn More
-
-  Designed for the future
-
-  Introducing an extensible editor
-  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-  change the looks of a blog.
-
-  Robust content management
-  Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-
-  State of the Art Infrastructure
-  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-
-  Free, open, simple
-  Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-
-  Powerful tooling
-  Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-  capable of producing even the most complicated sites.
-
-  Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
+        <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+      </div>
+      <!-- end of simple -->
   
-  Contact
-  Newsletter
-  LinkedIn
+      <!-- powerful testing  -->
+      <div>
+        <h4>Powerful tooling</h4>
+  
+        <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+          capable of producing even the most complicated sites.</p>
+      </div>
+      <!-- End of poerful testing -->
+    </div>
+    <!-- End of content section -->
+  </section>
+  <!-- END OF HERO CONTENT 4 -->
+
+  <!-- Footer  -->
+  <footer>
+    <div class="logo">
+      <img src="images/logo.svg" alt="">
+    </div>
+
+    <!-- Product navigation -->
+    <ul>
+      <li class="main-nav"><a href="#">product</a>
+        <!-- submenu -->
+        
+          <li class="submenu"><a href="">overview</a></li>
+          <li class="submenu"><a href="">pricing</a> </li>
+          <li class="submenu"><a href="">marketplace</a> </li>
+          <li class="submenu"><a href="">features</a> </li>
+          <li class="submenu"><a href="">integrations</a> </li>
+        
+        <!-- eend of submenu -->
+      </li>
+    </ul>
+    <!-- End of product navigation -->
+
+    <!-- Overview -->
+    <ul>
+      <li class="main-nav"><a href="">company</a>
+
+        <!-- submenu -->
+        <li class="submenu"><a href="#">about</a></li>
+        <li class="submenu"><a href="#">team</a></li>
+        <li class="submenu"><a href="#">blog</a></li>
+        <li class="submenu"><a href="#">careers</a></li>
+        <!-- End of submenu -->
+      </li>
+    </ul>
+    <!-- End of overview -->
+
+    <!-- connect -->
+    <ul>
+      <li class="main-nav"><a href="#">connect</a>
+        
+        <!-- submenu -->
+        <li class="submenu"><a href="#">contact</a></li>
+        <li class="submenu"><a href="#">newsletter</a></li>
+        <li class="submenu"><a href="#">linkedin</a></li>
+        <!-- End of submenu -->
+      </li>
+    </ul>
+    <!-- end of connect -->
+  </footer>
+  <!-- Footer -->
+
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
